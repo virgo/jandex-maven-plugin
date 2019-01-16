@@ -213,26 +213,26 @@ public class JandexGoal
                 }
             }
 
-            final File idx = new File( dir, "META-INF/"+indexName );
-            idx.getParentFile()
-               .mkdirs();
 
-            FileOutputStream indexOut = null;
-            try
-            {
-                indexOut = new FileOutputStream( idx );
-                final IndexWriter writer = new IndexWriter( indexOut );
-                final Index index = indexer.complete();
-                writer.write( index );
-            }
-            catch ( final IOException e )
-            {
-                throw new MojoExecutionException( e.getMessage(), e );
-            }
-            finally
-            {
-                IOUtil.close( indexOut );
-            }
+        }
+        final File idx = new File( classesDir, "META-INF/"+indexName );
+        idx.getParentFile()
+                .mkdirs();
+        FileOutputStream indexOut = null;
+        try
+        {
+            indexOut = new FileOutputStream( idx );
+            final IndexWriter writer = new IndexWriter( indexOut );
+            final Index index = indexer.complete();
+            writer.write( index );
+        }
+        catch ( final IOException e )
+        {
+            throw new MojoExecutionException( e.getMessage(), e );
+        }
+        finally
+        {
+            IOUtil.close( indexOut );
         }
 
     }

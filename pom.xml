@@ -307,30 +307,30 @@
 				<javadoc.opts>-Xdoclint:none</javadoc.opts>
 			</properties>
 		</profile>
-		<profile>
-			<id>release</id>
-			<build>
-				<plugins>
-					<plugin>
-						<artifactId>maven-source-plugin</artifactId>
-					</plugin>
-					<plugin>
-						<artifactId>maven-assembly-plugin</artifactId>
-					</plugin>
+		<!--<profile>-->
+			<!--<id>release</id>-->
+			<!--<build>-->
+				<!--<plugins>-->
 					<!--<plugin>-->
-						<!--<artifactId>maven-javadoc-plugin</artifactId>-->
+						<!--<artifactId>maven-source-plugin</artifactId>-->
 					<!--</plugin>-->
 					<!--<plugin>-->
-						<!--<artifactId>maven-gpg-plugin</artifactId>-->
+						<!--<artifactId>maven-assembly-plugin</artifactId>-->
 					<!--</plugin>-->
-					<!-- Not currently working; not sure why
-					<plugin>
-					  <groupId>com.github.github</groupId>
-					  <artifactId>site-maven-plugin</artifactId>
-					</plugin>
-					-->
-				</plugins>
-			</build>
-		</profile>
+					<!--&lt;!&ndash;<plugin>&ndash;&gt;-->
+						<!--&lt;!&ndash;<artifactId>maven-javadoc-plugin</artifactId>&ndash;&gt;-->
+					<!--&lt;!&ndash;</plugin>&ndash;&gt;-->
+					<!--&lt;!&ndash;<plugin>&ndash;&gt;-->
+						<!--&lt;!&ndash;<artifactId>maven-gpg-plugin</artifactId>&ndash;&gt;-->
+					<!--&lt;!&ndash;</plugin>&ndash;&gt;-->
+					<!--&lt;!&ndash; Not currently working; not sure why-->
+					<!--<plugin>-->
+					  <!--<groupId>com.github.github</groupId>-->
+					  <!--<artifactId>site-maven-plugin</artifactId>-->
+					<!--</plugin>-->
+					<!--&ndash;&gt;-->
+				<!--</plugins>-->
+			<!--</build>-->
+		<!--</profile>-->
 	</profiles>
 </project>
